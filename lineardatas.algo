@@ -1,0 +1,37 @@
+ALGORITHM algo1
+VAR
+    tab1: ARRAY_OF INTEGER;
+    tab2: ARRAY_OF INTEGER;
+    x: ARRAY_OF INTEGER;
+    s,k: INTEGER;
+BEGIN
+   x=[]
+   s=0
+   FOR i FROM 0 TO tab1.length STEP 1  DO
+       k=0
+       FOR j FROM 0 TO tab2.length STEP 1  DO
+           IF (tab1[i]===tab2[j]) THEN
+               k++
+           END_IF
+       END_FOR
+       iF (k===0) THEN
+        x.push(tab1[i])
+           END_IF
+   END_FOR 
+   FOR i FROM 0 TO tab2.length STEP 1  DO
+       k=0
+       FOR j FROM 0 TO tab1.length STEP 1  DO
+           IF (tab1[i]===tab2[j]) THEN
+               k++
+           END_IF
+       END_FOR
+       iF (k===0) THEN
+        x.push(tab2[i])
+           END_IF
+   END_FOR 
+FOR i FROM 0 TO x.length STEP 1  DO
+    s+=x[i]
+END_FOR
+write('distinct numbers are:',x)
+write('sum of distinct numbers is:',s)
+END

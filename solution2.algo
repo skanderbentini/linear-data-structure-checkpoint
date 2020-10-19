@@ -1,0 +1,20 @@
+ALGORITHM algorithm_name
+VAR
+    tab1: ARRAY_OF INTEGER;
+    tab2: ARRAY_OF INTEGER;
+    x: ARRAY_OF INTEGER;
+    s,k: INTEGER;
+BEGIN
+x=tab1+tab2
+s=0
+FOR i FROM 0 TO x.length STEP 1  DO
+    k=0
+    FOR j FROM 0 TO x.length STEP 1  DO
+        if (x[i]===x[j]&&i!=j)
+        k++
+        end_if
+    END_FOR
+END_FOR
+
+
+END
